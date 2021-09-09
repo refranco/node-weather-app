@@ -25,7 +25,7 @@ app.use(express.static(publicDirectory)) // este app.use reemplaza en este caso 
 app.get('', (req, res) => {
       res.render('index',{
             title:'Weather',
-            name: 'Esteban F.',
+            name:'Esteban Franco',
             titlePage:'Main page'
       })
 })
@@ -33,7 +33,7 @@ app.get('', (req, res) => {
 app.get('/about',(req,res) => {
       res.render('about',{
             title:'About Page',
-            name: 'E. Franco',
+            name: 'Esteban Franco',
             titlePage:'About'
       })
 })
@@ -41,7 +41,7 @@ app.get('/about',(req,res) => {
 app.get('/help',(req,res) => {
       res.render('help',{
             title:'HELP PAGE',
-            name: 'E. Franco',
+            name: 'Esteban Franco',
             message:'This is the first help page',
             titlePage:'Help'
       })
@@ -80,6 +80,7 @@ app.get('/weather',(req, res) => {
 app.get('/help/*',(req,res) =>{
       res.render('404',{
             title: 'Articulo de ayuda no encontrado',
+            name: 'Esteban Franco',
             message404: 'Para este artículo no existe ninguna ayuda',
             titlePage:'Help error'
       })
@@ -88,6 +89,7 @@ app.get('/help/*',(req,res) =>{
 app.get('*',(req,res) => {
       res.render('404',{
             title: 'Pagina no encontrada',
+            name: 'Esteban Franco',
             message404: 'La pagina que intenta buscar no es posible encontrarla, posiblemente no exista',
             titlePage:'Not found'
       })

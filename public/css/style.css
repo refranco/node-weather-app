@@ -20,7 +20,7 @@ footer {
       color: rgb(80, 71, 71);
       padding: 10px 5px;
       margin-top: 16px;
-      border-top: 2px solid #929d9e /* borde al tope del footer */
+      border-top: 2px solid #929d9e; /* borde al tope del footer */
 } 
 
 header {
@@ -28,7 +28,7 @@ header {
       margin-top: 10px;
       margin-bottom: 30px;
       padding: 5px 5px 16px 5px;
-      border-bottom: 2px solid #929d9e /* borde debajo del header */
+      border-bottom: 2px solid #929d9e; /* borde debajo del header */
 }
 h1 {
       font-size: 40px;
