@@ -12,7 +12,8 @@ const forecast = (latitude,longitud, callback) => {
                         feelslike,time,pressure,
                         visibility,observation_time, weather_descriptions} = body.current
                   const {country,region} = body.location
-                  callback(undefined,'It is '+ weather_descriptions[0]+' in '+region+'-'+country+
+                  callback(undefined,
+                        'It is '+ weather_descriptions[0]+' in '+region+'-'+country+
                         ', actual temperature '+ temperature+'°C and feelslike '+feelslike+'°C at '
                          +observation_time+'.  '+visibility+' km visibilty.')
             }
