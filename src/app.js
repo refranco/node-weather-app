@@ -5,6 +5,8 @@ const geocode = require('./utils/geocode')
 const forecast = require('./utils/forecast')
 
 const app = express() // app would be kind of an object of express class
+const port = process.env.PORT || 3000  // ****Cambio HEROKU
+
 
 // define paths for express library
 const publicDirectory = path.join(__dirname,'../public')
@@ -90,7 +92,7 @@ app.get('*',(req,res) => {
             titlePage:'Not found'
       })
 })
-//------------------------------------
-app.listen(3000, () => {
-      console.log('server is up on port 3000')
+// va al final port =  3000 para correr localmente o process.env.PORT para correr en heroku
+app.listen(port, () => { // ****Cambio HEROKU
+      console.log('server is up on port '+ port)
 })
