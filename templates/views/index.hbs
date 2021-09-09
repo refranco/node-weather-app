@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+       <head>
+            <link rel="icon" href="/images/weather.png">
+            <link rel="stylesheet" href="./css/style.css">
+            <title>{{titlePage}}</title>
+      </head>
+      <body>
+            <div class="main-content">
+                  {{>header}}
+
+                  <p>Your weather forecast</p>
+
+                  <form>
+                        <input placeholder="location" id="address " type="text">
+                        <button type="submit">Search</button>
+                        
+                  </form>
+
+                  <p id="message-1"></p>
+                  
+                  <p id="message-2"></p>
+            </div>
+            {{>footer}}
+            <script src='/js/app.js'></script> {{!-- Poner escript al final, cuando todos los elementos esten disponibles --}}
+            
+      </body>
+      
+</html>

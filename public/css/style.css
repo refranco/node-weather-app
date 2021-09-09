@@ -1,0 +1,62 @@
+body {
+      color : #333333;
+      font-family: arial;
+      max-width: 800px;
+      margin: 0 auto; /* 0 es el espacio para top y botton, auto centraliza margenes izquierda y derecha */
+      padding: 5px 16px; /*el espacio a dejar entre las diferentes margenes y la informacion */
+      
+      /* habilitando lo necesario para ordenar el body de toda la pagina y el footer que quede 
+         en el borde inferior */
+      display: flex; /*habilitando la libreria flex de CSS */
+      flex-direction: column; /*organizando la información en el body de arriba hacia abajo */
+      min-height: 100vh /* la minima altura del body es el 100% del view heigh (como quien dice toda la ventana)*/
+}
+
+.main-content {
+      flex-grow: 1; /* class main content debe tomar todo el espacio que resta del body */
+}
+footer {
+      background-color: #bfc9ca ;
+      color: rgb(80, 71, 71);
+      padding: 10px 5px;
+      margin-top: 16px;
+      border-top: 2px solid #929d9e /* borde al tope del footer */
+} 
+
+header {
+      background-color: #bfc9ca ;
+      margin-top: 10px;
+      margin-bottom: 30px;
+      padding: 5px 5px 16px 5px;
+      border-bottom: 2px solid #929d9e /* borde debajo del header */
+}
+h1 {
+      font-size: 40px;
+      margin-bottom: 10px;
+      text-align:center;
+}
+
+header a { /* solo apuntando a los links de header */
+      color: #888888;
+      margin-right: 16px;
+      text-decoration: none;
+
+}
+
+.portrait { /* apuntando a una class="portrait"*/
+      width: 250px;
+
+}
+
+input {
+      border: 1px solid #cccccc;
+      padding: 8px;
+}
+
+button {
+      cursor: pointer;
+      border: 1px solid #888888;
+      background: #888888;
+      color: white;
+      padding: 8px;
+}
