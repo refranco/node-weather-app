@@ -8,13 +8,21 @@ const forecast = (latitude,longitud, callback) => {
             } else if (body.error) {
                   callback('No hay coordenadas especificadas, revisar escritura y orden', undefined)
             } else {
-                  const temp = body.current.temperature
-                  const description = body.current.weather_descriptions[0]
-                  const feelslike = body.current.feelslike
-                  const time = body.current.observation_time
-                  callback(undefined,description+', actual temperature '+ temp+' celcius at '+time+', feelink like '+feelslike+' celcius.')
+                  const {temperature,description,
+                        feelslike,time,pressure,
+                        visibility,observation_time, weather_descriptions} = body.current
+                  const {country,region} = body.location
+                  callback(undefined,'It is '+ weather_descriptions[0]+' in '+region+'-'+country+
+                        ', actual temperature '+ temperature+'°C and feelslike '+feelslike+'°C at '
+                         +observation_time+'.  '+visibility+' km visibilty.')
             }
       })
 }
-
+// forecast(122,45, (error, forecastdata)=>{
+//       if (error){
+//             console.log(error)
+//       } else {
+//             console.log(forecastdata)
+//       }
+// })
 module.exports = forecast
