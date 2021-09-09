@@ -1,9 +1,8 @@
 // todo codigo corrido en aqui será corrido en Client Side Javascript. 
 // no sera corrido en node js, pues no es posible
 // como es corrido en cliente side javascript, es posible usar la API Fectch
-// la cual es usada en la mayori de exploradores modernos.
+// la cual es usada en la mayoria de exploradores modernos.
 
-console.log('Mensaje del client side javascript desde js/app.js')
 
 // fetch('http://puzzle.mead.io/puzzle').then((response) =>{
 //       response.json().then((data) => {
